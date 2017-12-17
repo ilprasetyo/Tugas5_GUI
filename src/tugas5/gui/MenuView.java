@@ -338,6 +338,8 @@ public class MenuView extends javax.swing.JFrame {
 
     private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
         // TODO add your handling code here:
+        AboutView obj = new AboutView();
+        obj.setVisible(true);
     }//GEN-LAST:event_btnAboutActionPerformed
 
     private void btnMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenu2ActionPerformed
