@@ -30,6 +30,7 @@ public class MenuView extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         BodyPanel = new javax.swing.JPanel();
         menuPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -69,6 +70,9 @@ public class MenuView extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         txtSekolah = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
+        jLabel54 = new javax.swing.JLabel();
+        radioLaki = new javax.swing.JRadioButton();
+        radioPerempuan = new javax.swing.JRadioButton();
         menu2 = new javax.swing.JPanel();
         Blue = new javax.swing.JPanel();
         btnRed = new javax.swing.JButton();
@@ -134,6 +138,14 @@ public class MenuView extends javax.swing.JFrame {
         jLabel48 = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
         menu3 = new javax.swing.JPanel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        txtPanjang = new javax.swing.JTextField();
+        txtLebar = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtOutput = new javax.swing.JTextArea();
 
         jLabel2.setBackground(new java.awt.Color(51, 153, 255));
         jLabel2.setFont(new java.awt.Font("Arial Narrow", 1, 24)); // NOI18N
@@ -441,6 +453,8 @@ public class MenuView extends javax.swing.JFrame {
         txtKelas.setForeground(new java.awt.Color(255, 255, 255));
         txtKelas.setBorder(null);
 
+        btnSimpan.setBackground(new java.awt.Color(51, 153, 255));
+        btnSimpan.setForeground(new java.awt.Color(255, 255, 255));
         btnSimpan.setText("Simpan");
         btnSimpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -456,6 +470,18 @@ public class MenuView extends javax.swing.JFrame {
         txtSekolah.setForeground(new java.awt.Color(255, 255, 255));
         txtSekolah.setBorder(null);
 
+        jLabel54.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel54.setText("Jenis Kelamin");
+
+        buttonGroup1.add(radioLaki);
+        radioLaki.setForeground(new java.awt.Color(255, 255, 255));
+        radioLaki.setText("Laki-Laki");
+
+        buttonGroup1.add(radioPerempuan);
+        radioPerempuan.setForeground(new java.awt.Color(255, 255, 255));
+        radioPerempuan.setText("Perempuan");
+
         javax.swing.GroupLayout menu1Layout = new javax.swing.GroupLayout(menu1);
         menu1.setLayout(menu1Layout);
         menu1Layout.setHorizontalGroup(
@@ -465,14 +491,9 @@ public class MenuView extends javax.swing.JFrame {
                 .addGroup(menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(menu1Layout.createSequentialGroup()
                         .addComponent(jLabel7)
-                        .addGap(49, 49, 49)
-                        .addGroup(menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menu1Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(168, 168, 168))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menu1Layout.createSequentialGroup()
-                                .addComponent(txtNama, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
-                                .addGap(191, 191, 191))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                        .addComponent(jLabel6)
+                        .addGap(168, 168, 168))
                     .addGroup(menu1Layout.createSequentialGroup()
                         .addGroup(menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnSimpan)
@@ -480,16 +501,20 @@ public class MenuView extends javax.swing.JFrame {
                                 .addGroup(menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel8)
                                     .addComponent(jLabel9)
-                                    .addComponent(jLabel11))
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel54))
                                 .addGap(37, 37, 37)
                                 .addGroup(menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jSeparator4)
                                     .addComponent(jSeparator1)
                                     .addComponent(jSeparator2)
                                     .addComponent(jSeparator3)
-                                    .addComponent(txtKelas)
+                                    .addComponent(radioPerempuan)
                                     .addComponent(txtNim, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txtSekolah, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE))))
+                                    .addComponent(txtSekolah, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                                    .addComponent(radioLaki)
+                                    .addComponent(txtKelas, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtNama, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE))))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         menu1Layout.setVerticalGroup(
@@ -509,6 +534,12 @@ public class MenuView extends javax.swing.JFrame {
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addGroup(menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel54)
+                    .addComponent(radioLaki))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(radioPerempuan)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -521,9 +552,9 @@ public class MenuView extends javax.swing.JFrame {
                     .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(18, 18, 18)
                 .addComponent(btnSimpan)
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         mainPanel.add(menu1, "card3");
@@ -613,7 +644,7 @@ public class MenuView extends javax.swing.JFrame {
         jLabel44.setForeground(new java.awt.Color(255, 255, 255));
         jLabel44.setText("Set Background");
 
-        jLabel24.setIcon(new javax.swing.ImageIcon("C:\\Users\\Alaba\\Documents\\NetBeansProjects\\Tugas5-GUI\\Arrow -WF.png")); // NOI18N
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Arrow -WF.png"))); // NOI18N
 
         javax.swing.GroupLayout BlueLayout = new javax.swing.GroupLayout(Blue);
         Blue.setLayout(BlueLayout);
@@ -629,11 +660,11 @@ public class MenuView extends javax.swing.JFrame {
                         .addComponent(btnGreen, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnBlue, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 11, Short.MAX_VALUE)))
+                        .addGap(0, 17, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(BlueLayout.createSequentialGroup()
                 .addGap(184, 184, 184)
@@ -647,16 +678,16 @@ public class MenuView extends javax.swing.JFrame {
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(BlueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnRed, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGreen, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBlue, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(BlueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BlueLayout.createSequentialGroup()
                         .addGap(5, 5, 5)
                         .addGroup(BlueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(BlueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnRed, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnGreen, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnBlue, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -744,7 +775,7 @@ public class MenuView extends javax.swing.JFrame {
         jLabel45.setForeground(new java.awt.Color(255, 255, 255));
         jLabel45.setText("Set Background");
 
-        jLabel35.setIcon(new javax.swing.ImageIcon("C:\\Users\\Alaba\\Documents\\NetBeansProjects\\Tugas5-GUI\\Arrow -WF.png")); // NOI18N
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Arrow -WF.png"))); // NOI18N
 
         javax.swing.GroupLayout GreenLayout = new javax.swing.GroupLayout(Green);
         Green.setLayout(GreenLayout);
@@ -760,11 +791,11 @@ public class MenuView extends javax.swing.JFrame {
                         .addComponent(btnGreen1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnBlue1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 11, Short.MAX_VALUE)))
+                        .addGap(0, 17, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(GreenLayout.createSequentialGroup()
                 .addGap(184, 184, 184)
@@ -778,16 +809,16 @@ public class MenuView extends javax.swing.JFrame {
                 .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(GreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnRed1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGreen1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBlue1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(GreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(GreenLayout.createSequentialGroup()
                         .addGap(5, 5, 5)
                         .addGroup(GreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(GreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnRed1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnGreen1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnBlue1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -875,7 +906,7 @@ public class MenuView extends javax.swing.JFrame {
         jLabel48.setForeground(new java.awt.Color(255, 255, 255));
         jLabel48.setText("Set Background");
 
-        jLabel49.setIcon(new javax.swing.ImageIcon("C:\\Users\\Alaba\\Documents\\NetBeansProjects\\Tugas5-GUI\\Arrow -WF.png")); // NOI18N
+        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Arrow -WF.png"))); // NOI18N
 
         javax.swing.GroupLayout RedLayout = new javax.swing.GroupLayout(Red);
         Red.setLayout(RedLayout);
@@ -909,16 +940,16 @@ public class MenuView extends javax.swing.JFrame {
                 .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(RedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnRed2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGreen2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBlue2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(RedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(RedLayout.createSequentialGroup()
                         .addGap(5, 5, 5)
                         .addGroup(RedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(RedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnRed2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnGreen2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnBlue2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -928,15 +959,81 @@ public class MenuView extends javax.swing.JFrame {
 
         menu3.setBackground(new java.awt.Color(51, 153, 255));
 
+        jLabel55.setFont(new java.awt.Font("Arial Narrow", 1, 24)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel55.setText("Hitung Luas Persegi");
+
+        jLabel56.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel56.setText("Panjang");
+
+        jLabel57.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel57.setText("Lebar");
+
+        txtPanjang.setBackground(new java.awt.Color(51, 153, 255));
+        txtPanjang.setForeground(new java.awt.Color(255, 255, 255));
+
+        txtLebar.setBackground(new java.awt.Color(51, 153, 255));
+        txtLebar.setForeground(new java.awt.Color(255, 255, 255));
+        txtLebar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLebarActionPerformed(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(51, 153, 255));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Hasil");
+
+        txtOutput.setBackground(new java.awt.Color(51, 153, 255));
+        txtOutput.setColumns(20);
+        txtOutput.setRows(5);
+        jScrollPane1.setViewportView(txtOutput);
+
         javax.swing.GroupLayout menu3Layout = new javax.swing.GroupLayout(menu3);
         menu3.setLayout(menu3Layout);
         menu3Layout.setHorizontalGroup(
             menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+            .addGroup(menu3Layout.createSequentialGroup()
+                .addGroup(menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(menu3Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton1)
+                            .addGroup(menu3Layout.createSequentialGroup()
+                                .addGroup(menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel57, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(52, 52, 52)
+                                .addGroup(menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel55)
+                                    .addGroup(menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtLebar)
+                                        .addComponent(txtPanjang, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))))))
+                    .addGroup(menu3Layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         menu3Layout.setVerticalGroup(
             menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(menu3Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel55)
+                .addGap(48, 48, 48)
+                .addGroup(menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel56)
+                    .addComponent(txtPanjang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel57)
+                    .addComponent(txtLebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addComponent(jButton1)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(142, Short.MAX_VALUE))
         );
 
         mainPanel.add(menu3, "card5");
@@ -1040,8 +1137,16 @@ public class MenuView extends javax.swing.JFrame {
 
     private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanActionPerformed
         // TODO add your handling code here:        
+        String jKelamin="";
+        
+        if (radioLaki.isSelected()){
+         jKelamin="Laki-Laki";
+        }else if (radioPerempuan.isSelected()){
+         jKelamin="Perempuan";
+        }
+        
         Biodata oBio = new Biodata(txtNama.getText(), txtNim.getText(),txtKelas.getText(),txtSekolah.getText());
-        JOptionPane.showMessageDialog(null, oBio.getNama()+"\n"+ oBio.getNim()+"\n"+oBio.getKelas()+"\n"+oBio.getSekolah());
+        JOptionPane.showMessageDialog(null, oBio.getNama()+"\n"+ oBio.getNim()+"\n"+jKelamin+"\n"+oBio.getKelas()+"\n"+oBio.getSekolah());
     }//GEN-LAST:event_btnSimpanActionPerformed
 
     private void btnRedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRedActionPerformed
@@ -1143,6 +1248,10 @@ public class MenuView extends javax.swing.JFrame {
         menu2.revalidate();
     }//GEN-LAST:event_btnBlue2ActionPerformed
 
+    private void txtLebarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLebarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLebarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1199,7 +1308,9 @@ public class MenuView extends javax.swing.JFrame {
     private javax.swing.JButton btnRed1;
     private javax.swing.JButton btnRed2;
     private javax.swing.JButton btnSimpan;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JPanel home;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1249,6 +1360,10 @@ public class MenuView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1259,6 +1374,7 @@ public class MenuView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -1280,9 +1396,14 @@ public class MenuView extends javax.swing.JFrame {
     private javax.swing.JPanel menu2;
     private javax.swing.JPanel menu3;
     private javax.swing.JPanel menuPanel;
+    private javax.swing.JRadioButton radioLaki;
+    private javax.swing.JRadioButton radioPerempuan;
     private javax.swing.JTextField txtKelas;
+    private javax.swing.JTextField txtLebar;
     private javax.swing.JTextField txtNama;
     private javax.swing.JTextField txtNim;
+    private javax.swing.JTextArea txtOutput;
+    private javax.swing.JTextField txtPanjang;
     private javax.swing.JTextField txtSekolah;
     // End of variables declaration//GEN-END:variables
 }
