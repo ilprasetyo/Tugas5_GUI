@@ -52,7 +52,7 @@ public class LoginView extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(8, 105, 202));
         jPanel2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Alaba\\Documents\\NetBeansProjects\\Tugas5-GUI\\123.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/123.png"))); // NOI18N
         jLabel2.setAlignmentX(0.5F);
 
         jPanel5.setBackground(new java.awt.Color(63, 144, 210));
@@ -63,9 +63,9 @@ public class LoginView extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("log in");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Alaba\\Documents\\NetBeansProjects\\Tugas5-GUI\\user.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/user.png"))); // NOI18N
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Alaba\\Documents\\NetBeansProjects\\Tugas5-GUI\\lock.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/lock.png"))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Arial Narrow", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));

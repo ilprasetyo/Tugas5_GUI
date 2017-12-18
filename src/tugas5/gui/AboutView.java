@@ -46,7 +46,7 @@ public class AboutView extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("About Me");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Alaba\\Documents\\NetBeansProjects\\Tugas5-GUI\\profil.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/profil.jpg"))); // NOI18N
 
         jScrollPane2.setBackground(new java.awt.Color(63, 144, 210));
         jScrollPane2.setForeground(new java.awt.Color(255, 255, 255));
@@ -64,13 +64,13 @@ public class AboutView extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Alaba\\Documents\\NetBeansProjects\\Tugas5-GUI\\Facebook.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Facebook.png"))); // NOI18N
         jLabel3.setText("Ilham Prasetyo");
 
         jLabel4.setBackground(new java.awt.Color(51, 153, 255));
         jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Alaba\\Documents\\NetBeansProjects\\Tugas5-GUI\\Mail-03.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Mail-03.png"))); // NOI18N
         jLabel4.setText("Ilprasetyo2125@gmail.com");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
